@@ -46,3 +46,29 @@ def view_summary():
         savings = income - total_expenses
         print(f"\nYou have saved: {savings}")
 
+# Function to run the tracker
+def run_tracker():
+    while True:
+        print("\n--- Personal Budget Tracker ---")
+        print("1. Add Income")
+        print("2. Add Expense")
+        print("3. View Summary")
+        print("4. Exit")
+        
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == '1':
+            add_income()
+        elif choice == '2':
+            add_expense()
+        elif choice == '3':
+            view_summary()
+        elif choice == '4':
+            print("Exiting the program, Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please select from 1 to 4.")
+
+# Run the program
+if __name__ == "__main__":
+    run_tracker()
